@@ -1,0 +1,36 @@
+CREATE TABLE users (
+    username VARCHAR(256) PRIMARY KEY NOT NULL,
+    first_name VARCHAR(256),
+    password VARCHAR(256),
+    last_name VARCHAR(256),
+    phonenumber VARCHAR(256) ,
+    passport_id VARCHAR(256) 
+    
+);
+
+CREATE TABLE cars (
+    car_id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    model VARCHAR(256),
+    car_length VARCHAR(256),
+    last_service DATETIME,
+    service_due DATETIME,
+    weight VARCHAR(256),
+    kilometers VARCHAR(256),
+    cargo_capable VARCHAR(256)
+);
+
+CREATE TABLE driverhours (
+  monthlyRota_id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  user_username VARCHAR(256) ,
+  FOREIGN KEY (user_username) REFERENCES users(username) ON DELETE CASCADE ON UPDATE CASCADE,
+  hours VARCHAR(256)
+  
+
+);
+
+CREATE TABLE orders (
+  order_id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  order_due VARCHAR(256),
+  weight_aproximation VARCHAR(256)
+
+);
