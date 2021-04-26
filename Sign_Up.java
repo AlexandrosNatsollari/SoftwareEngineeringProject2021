@@ -1,6 +1,4 @@
-// Java program to implement
-// a Simple Registration Form
-// using Java Swing
+//vasikh klassh sign up
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,6 +19,10 @@ class Sign_Up
 	private JTextField tmno;
 	private JLabel PassportId;
 	private JTextField tPassportId;
+	private JLabel Password;
+	private JTextField tPassword;
+	private JLabel ConfirmPassword;
+	private JTextField tConfirmPassword;
 	private JLabel gender;
 	private JRadioButton male;
 	private JRadioButton female;
@@ -80,7 +82,7 @@ class Sign_Up
 		name = new JLabel("First&LastName");
 		name.setFont(new Font("Arial", Font.PLAIN, 20));
 		name.setSize(190, 20);
-		name.setLocation(50, 100);
+		name.setLocation(40, 100);
 		c.add(name);
 
 		tname = new JTextField();
@@ -92,7 +94,7 @@ class Sign_Up
 		Username = new JLabel("Username");
 		Username.setFont(new Font("Arial", Font.PLAIN, 20));
 		Username.setSize(190, 20);
-		Username.setLocation(100, 150);
+		Username.setLocation(40, 150);
 		c.add(Username);
 
 		tUsername = new JTextField();
@@ -104,7 +106,7 @@ class Sign_Up
 		mno = new JLabel("Mobile");
 		mno.setFont(new Font("Arial", Font.PLAIN, 20));
 		mno.setSize(100, 20);
-		mno.setLocation(100, 200);
+		mno.setLocation(40, 200);
 		c.add(mno);
 
 		tmno = new JTextField();
@@ -116,7 +118,7 @@ class Sign_Up
 		PassportId = new JLabel("PassportId");
 		PassportId.setFont(new Font("Arial", Font.PLAIN, 20));
 		PassportId.setSize(100, 20);
-		PassportId.setLocation(100, 250);
+		PassportId.setLocation(40, 250);
 		c.add(PassportId);
 
 		tPassportId = new JTextField();
@@ -124,25 +126,49 @@ class Sign_Up
 		tPassportId.setSize(190, 20);
 		tPassportId.setLocation(200, 250);
 		c.add(tPassportId);
+		
+		Password = new JLabel("Password");
+		Password.setFont(new Font("Arial", Font.PLAIN, 20));
+		Password.setSize(100, 20);
+		Password.setLocation(40, 300);
+		c.add(Password);
+
+		tPassword = new JTextField();
+		tPassword.setFont(new Font("Arial", Font.PLAIN, 15));
+		tPassword.setSize(190, 20);
+		tPassword.setLocation(200, 300);
+		c.add(tPassword);
+		
+		ConfirmPassword = new JLabel("ConfirmPassword");
+		ConfirmPassword.setFont(new Font("Arial", Font.PLAIN, 20));
+		ConfirmPassword.setSize(190, 20);
+		ConfirmPassword.setLocation(40, 350);
+		c.add(ConfirmPassword);
+
+		tConfirmPassword = new JTextField();
+		tConfirmPassword.setFont(new Font("Arial", Font.PLAIN, 15));
+		tConfirmPassword.setSize(190, 20);
+		tConfirmPassword.setLocation(200, 350);
+		c.add(tConfirmPassword);
 
 		gender = new JLabel("Gender");
 		gender.setFont(new Font("Arial", Font.PLAIN, 20));
 		gender.setSize(100, 20);
-		gender.setLocation(100, 300);
+		gender.setLocation(100, 400);
 		c.add(gender);
 
 		male = new JRadioButton("Male");
 		male.setFont(new Font("Arial", Font.PLAIN, 15));
 		male.setSelected(true);
 		male.setSize(75, 20);
-		male.setLocation(200, 300);
+		male.setLocation(200, 400);
 		c.add(male);
 
 		female = new JRadioButton("Female");
 		female.setFont(new Font("Arial", Font.PLAIN, 15));
 		female.setSelected(false);
 		female.setSize(80, 20);
-		female.setLocation(275, 300);
+		female.setLocation(275, 400);
 		c.add(female);
 
 		gengp = new ButtonGroup();
@@ -152,37 +178,37 @@ class Sign_Up
 		dob = new JLabel("DOB");
 		dob.setFont(new Font("Arial", Font.PLAIN, 20));
 		dob.setSize(100, 20);
-		dob.setLocation(100, 350);
+		dob.setLocation(100, 450);
 		c.add(dob);
 
 		date = new JComboBox(dates);
 		date.setFont(new Font("Arial", Font.PLAIN, 15));
 		date.setSize(50, 20);
-		date.setLocation(200, 350);
+		date.setLocation(200, 450);
 		c.add(date);
 
 		month = new JComboBox(months);
 		month.setFont(new Font("Arial", Font.PLAIN, 15));
 		month.setSize(60, 20);
-		month.setLocation(250, 350);
+		month.setLocation(250, 450);
 		c.add(month);
 
 		year = new JComboBox(years);
 		year.setFont(new Font("Arial", Font.PLAIN, 15));
 		year.setSize(60, 20);
-		year.setLocation(320, 350);
+		year.setLocation(320, 450);
 		c.add(year);
 
 		add = new JLabel("Address");
 		add.setFont(new Font("Arial", Font.PLAIN, 20));
 		add.setSize(100, 20);
-		add.setLocation(100, 400);
+		add.setLocation(100, 500);
 		c.add(add);
 
 		tadd = new JTextArea();
 		tadd.setFont(new Font("Arial", Font.PLAIN, 15));
 		tadd.setSize(200, 50);
-		tadd.setLocation(200, 400);
+		tadd.setLocation(200, 500);
 		tadd.setLineWrap(true);
 		c.add(tadd);
 
@@ -217,7 +243,7 @@ class Sign_Up
 		res = new JLabel("");
 		res.setFont(new Font("Arial", Font.PLAIN, 20));
 		res.setSize(500, 25);
-		res.setLocation(100, 500);
+		res.setLocation(500, 300);
 		c.add(res);
 
 		resadd = new JTextArea();
@@ -246,7 +272,11 @@ class Sign_Up
 					+ "Mobile : "
 					+ tmno.getText() + "\n"
 					+ "PassportId : "
-					+ tPassportId.getText() + "\n";
+					+ tPassportId.getText() + "\n"
+					+ "Password : "
+					+ tPassword.getText() + "\n"
+					+ "ConfirmPassword : "
+					+ tConfirmPassword.getText() + "\n";
 				if (male.isSelected())
 					data1 = "Gender : Male"
 							+ "\n";
@@ -280,6 +310,8 @@ class Sign_Up
 			tadd.setText(def);
 			tmno.setText(def);
 			tPassportId.setText(def);
+			tPassword.setText(def);
+			tConfirmPassword.setText(def);
 			res.setText(def);
 			tout.setText(def);
 			term.setSelected(false);
