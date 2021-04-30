@@ -72,13 +72,15 @@ class Sign_Up
 
 		c = getContentPane();
 		c.setLayout(null);
-
+                
+		// Sign up location and size
 		title = new JLabel("Sign Up!");
 		title.setFont(new Font("Arial", Font.PLAIN, 30));
 		title.setSize(300, 30);
 		title.setLocation(300, 30);
 		c.add(title);
-
+                
+		// FirstName&LastName location and size
 		name = new JLabel("First&LastName");
 		name.setFont(new Font("Arial", Font.PLAIN, 20));
 		name.setSize(190, 20);
@@ -91,6 +93,7 @@ class Sign_Up
 		tname.setLocation(200, 100);
 		c.add(tname);
 		
+		// Username location and size
 		Username = new JLabel("Username");
 		Username.setFont(new Font("Arial", Font.PLAIN, 20));
 		Username.setSize(190, 20);
@@ -102,7 +105,8 @@ class Sign_Up
 		tUsername.setSize(190, 20);
 		tUsername.setLocation(200, 150);
 		c.add(tUsername);
-
+                
+		// Mobile location and size
 		mno = new JLabel("Mobile");
 		mno.setFont(new Font("Arial", Font.PLAIN, 20));
 		mno.setSize(100, 20);
@@ -115,6 +119,7 @@ class Sign_Up
 		tmno.setLocation(200, 200);
 		c.add(tmno);
 		
+		// PassportId location and size
 		PassportId = new JLabel("PassportId");
 		PassportId.setFont(new Font("Arial", Font.PLAIN, 20));
 		PassportId.setSize(100, 20);
@@ -127,6 +132,7 @@ class Sign_Up
 		tPassportId.setLocation(200, 250);
 		c.add(tPassportId);
 		
+		// Password location and size
 		Password = new JLabel("Password");
 		Password.setFont(new Font("Arial", Font.PLAIN, 20));
 		Password.setSize(100, 20);
@@ -139,6 +145,7 @@ class Sign_Up
 		tPassword.setLocation(200, 300);
 		c.add(tPassword);
 		
+		// ConfirmPassword location and size
 		ConfirmPassword = new JLabel("ConfirmPassword");
 		ConfirmPassword.setFont(new Font("Arial", Font.PLAIN, 20));
 		ConfirmPassword.setSize(190, 20);
@@ -150,13 +157,15 @@ class Sign_Up
 		tConfirmPassword.setSize(190, 20);
 		tConfirmPassword.setLocation(200, 350);
 		c.add(tConfirmPassword);
-
+                
+		// Gender location and size
 		gender = new JLabel("Gender");
 		gender.setFont(new Font("Arial", Font.PLAIN, 20));
 		gender.setSize(100, 20);
 		gender.setLocation(100, 400);
 		c.add(gender);
-
+                
+		//Gender options
 		male = new JRadioButton("Male");
 		male.setFont(new Font("Arial", Font.PLAIN, 15));
 		male.setSelected(true);
@@ -174,7 +183,8 @@ class Sign_Up
 		gengp = new ButtonGroup();
 		gengp.add(male);
 		gengp.add(female);
-
+                
+		// Date of Birth location and size
 		dob = new JLabel("DOB");
 		dob.setFont(new Font("Arial", Font.PLAIN, 20));
 		dob.setSize(100, 20);
@@ -198,7 +208,8 @@ class Sign_Up
 		year.setSize(60, 20);
 		year.setLocation(320, 450);
 		c.add(year);
-
+                
+		// Address location and size
 		add = new JLabel("Address");
 		add.setFont(new Font("Arial", Font.PLAIN, 20));
 		add.setSize(100, 20);
@@ -211,20 +222,23 @@ class Sign_Up
 		tadd.setLocation(200, 500);
 		tadd.setLineWrap(true);
 		c.add(tadd);
-
+                
+		// Accept Terms And Conditions location and size
 		term = new JCheckBox("Accept Terms And Conditions.");
 		term.setFont(new Font("Arial", Font.PLAIN, 15));
 		term.setSize(250, 20);
 		term.setLocation(650, 450);
 		c.add(term);
-
+                
+		// Submit location and size
 		sub = new JButton("Submit");
 		sub.setFont(new Font("Arial", Font.PLAIN, 15));
 		sub.setSize(100, 20);
 		sub.setLocation(650, 500);
 		sub.addActionListener(this);
 		c.add(sub);
-
+                
+		//Reset location and size
 		reset = new JButton("Reset");
 		reset.setFont(new Font("Arial", Font.PLAIN, 15));
 		reset.setSize(100, 20);
@@ -239,7 +253,8 @@ class Sign_Up
 		tout.setLineWrap(true);
 		tout.setEditable(false);
 		c.add(tout);
-
+                
+		// Result box location and size
 		res = new JLabel("");
 		res.setFont(new Font("Arial", Font.PLAIN, 20));
 		res.setSize(500, 25);
