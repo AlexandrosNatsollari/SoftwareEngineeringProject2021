@@ -8,11 +8,16 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.border.TitledBorder;
+
 
 public class buttons {
   public static void main(String... args) {
    final JFrame f = new JFrame();
- 
+   TitledBorder border = new TitledBorder("Αρχική οθόνη Xρήστη");
+    border.setTitleJustification(TitledBorder.CENTER);
+    border.setTitlePosition(TitledBorder.TOP);
+   
         // Create OK button
         JButton btnOK = new JButton("OK");
    
@@ -37,10 +42,16 @@ public class buttons {
                 });
 
     JPanel p = new JPanel();
+     p.setBorder(border);
+    f.add(p);
  
+    f.setVisible(true);     
+     
+     
+     
     p.setLayout(null);
-    btnOK.setBounds(10, 90, 100, 100);
-    btnCancel.setBounds(40, 10, 100, 60);
+    btnOK.setBounds(30, 80, 90, 50);
+    btnCancel.setBounds(30, 20, 90, 50);
     
     p.add(btnOK);
     p.add(btnCancel);
@@ -51,4 +62,26 @@ public class buttons {
     f.setSize(400, 400);
     f.setVisible(true);
   }
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 }
