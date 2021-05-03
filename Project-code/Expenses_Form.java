@@ -21,10 +21,15 @@ class Expenses_Form
     private JLabel Tolls;
     private JLabel Tolls_Number;
     private JComboBox tTolls_Number;
-    
-    
-    
-    
+    private JLabel Tolls_total_Cost;
+    private JTextField tTolls_total_Cost;
+    private JLabel Garage;
+    private JLabel Garage_Name;
+    private JTextField tGarage_Name;
+    private JLabel Repair_Cost;
+    private JTextField tRepair_Cost;
+    private JLabel Repair_Description;
+    private JTextArea tRepair_Description;
    
     
     private JButton sub;
@@ -66,8 +71,8 @@ class Expenses_Form
   
         tlicense_plate = new JTextField();
         tlicense_plate.setFont(new Font("Arial", Font.PLAIN, 15));
-        tlicense_plate.setSize(120, 20);
-        tlicense_plate.setLocation(230, 100);
+        tlicense_plate.setSize(180, 20);
+        tlicense_plate.setLocation(300, 100);
         c.add(tlicense_plate);
         
         Fuel = new JLabel("Fuel");
@@ -83,12 +88,12 @@ class Expenses_Form
         c.add(Fuel_type);
   
         tFuel_type = new JComboBox(types);
-    tFuel_type.setFont(new Font("Arial", Font.PLAIN, 15));
-    tFuel_type.setSize(120, 20);
-    tFuel_type.setLocation(230, 155);
-    c.add(tFuel_type);
+        tFuel_type.setFont(new Font("Arial", Font.PLAIN, 15));
+        tFuel_type.setSize(180, 20);
+        tFuel_type.setLocation(300, 155);
+        c.add(tFuel_type);
     
-    Liter_Price = new JLabel("LiterPrice");
+        Liter_Price = new JLabel("LiterPrice");
         Liter_Price.setFont(new Font("Arial", Font.PLAIN, 20));
         Liter_Price.setSize(100, 20);
         Liter_Price.setLocation(120, 180);
@@ -96,8 +101,8 @@ class Expenses_Form
         
         tLiter_Price = new JTextField();
         tLiter_Price.setFont(new Font("Arial", Font.PLAIN, 15));
-        tLiter_Price.setSize(120, 20);
-        tLiter_Price.setLocation(230, 180);
+        tLiter_Price.setSize(180, 20);
+        tLiter_Price.setLocation(300, 180);
         c.add(tLiter_Price);
         
         Liters = new JLabel("Liters");
@@ -108,8 +113,8 @@ class Expenses_Form
         
         tLiters = new JTextField();
         tLiters.setFont(new Font("Arial", Font.PLAIN, 15));
-        tLiters.setSize(120, 20);
-        tLiters.setLocation(230, 205);
+        tLiters.setSize(180, 20);
+        tLiters.setLocation(300, 205);
         c.add(tLiters);
   
         Tolls = new JLabel("Tolls");
@@ -117,12 +122,73 @@ class Expenses_Form
         Tolls.setSize(100, 20);
         Tolls.setLocation(100, 240);
         c.add(Tolls);
-  
+
+        Tolls_Number = new JLabel("Tolls Number");
+        Tolls_Number.setFont(new Font("Arial", Font.PLAIN, 20));
+        Tolls_Number.setSize(150, 20);
+        Tolls_Number.setLocation(120, 265);
+        c.add(Tolls_Number);
+        
         tTolls_Number = new JComboBox(numbers);
-    tTolls_Number.setFont(new Font("Arial", Font.PLAIN, 15));
-    tTolls_Number.setSize(120, 20);
-    tTolls_Number.setLocation(230, 265);
-    c.add(tTolls_Number);
+        tTolls_Number.setFont(new Font("Arial", Font.PLAIN, 15));
+        tTolls_Number.setSize(180, 20);
+        tTolls_Number.setLocation(300, 265);
+        c.add(tTolls_Number);
+        
+        Tolls_total_Cost = new JLabel("Tolls Total Cost");
+        Tolls_total_Cost.setFont(new Font("Arial", Font.PLAIN, 20));
+        Tolls_total_Cost.setSize(150, 20);
+        Tolls_total_Cost.setLocation(120, 290);
+        c.add(Tolls_total_Cost);
+        
+        tTolls_total_Cost = new JTextField();
+        tTolls_total_Cost.setFont(new Font("Arial", Font.PLAIN, 15));
+        tTolls_total_Cost.setSize(180, 20);
+        tTolls_total_Cost.setLocation(300, 290);
+        c.add(tTolls_total_Cost);
+        
+        Garage = new JLabel("Garage");
+        Garage.setFont(new Font("Arial", Font.PLAIN, 20));
+        Garage.setSize(150, 25);
+        Garage.setLocation(100, 315);
+        c.add(Garage);
+        
+        Garage_Name = new JLabel("Garage Name");
+        Garage_Name.setFont(new Font("Arial", Font.PLAIN, 20));
+        Garage_Name.setSize(150, 25);
+        Garage_Name.setLocation(120, 340);
+        c.add(Garage_Name);
+        
+        tGarage_Name = new JTextField();
+        tGarage_Name.setFont(new Font("Arial", Font.PLAIN, 15));
+        tGarage_Name.setSize(180, 20);
+        tGarage_Name.setLocation(300, 340);
+        c.add(tGarage_Name);
+        
+        Repair_Cost = new JLabel("Repair Cost");
+        Repair_Cost.setFont(new Font("Arial", Font.PLAIN, 20));
+        Repair_Cost.setSize(150, 25);
+        Repair_Cost.setLocation(120, 365);
+        c.add(Repair_Cost);
+        
+        tRepair_Cost = new JTextField();
+        tRepair_Cost.setFont(new Font("Arial", Font.PLAIN, 15));
+        tRepair_Cost.setSize(180, 20);
+        tRepair_Cost.setLocation(300, 365);
+        c.add(tRepair_Cost);
+        
+        Repair_Description = new JLabel("Repair Description");
+        Repair_Description.setFont(new Font("Arial", Font.PLAIN, 20));
+        Repair_Description.setSize(200, 25);
+        Repair_Description.setLocation(120, 390);
+        c.add(Repair_Description);
+        
+        tRepair_Description = new JTextArea();
+        tRepair_Description.setFont(new Font("Arial", Font.PLAIN, 15));
+        tRepair_Description.setSize(180, 80);
+        tRepair_Description.setLocation(300, 390);
+        tRepair_Description.setLineWrap(true);
+        c.add(tRepair_Description);
   
         ///////////////////////////////////////////////////////////////////
         
@@ -135,21 +201,21 @@ class Expenses_Form
         sub = new JButton("Submit");
         sub.setFont(new Font("Arial", Font.PLAIN, 15));
         sub.setSize(100, 20);
-        sub.setLocation(150, 450);
+        sub.setLocation(150, 500);
         sub.addActionListener(this);
         c.add(sub);
   
         reset = new JButton("Reset");
         reset.setFont(new Font("Arial", Font.PLAIN, 15));
         reset.setSize(100, 20);
-        reset.setLocation(270, 450);
+        reset.setLocation(340, 500);
         reset.addActionListener(this);
         c.add(reset);
   
         tout = new JTextArea();
         tout.setFont(new Font("Arial", Font.PLAIN, 15));
         tout.setSize(300, 400);
-        tout.setLocation(500, 100);
+        tout.setLocation(550, 100);
         tout.setLineWrap(true);
         tout.setEditable(false);
         c.add(tout);
@@ -157,7 +223,7 @@ class Expenses_Form
         res = new JLabel("");
         res.setFont(new Font("Arial", Font.PLAIN, 20));
         res.setSize(500, 25);
-        res.setLocation(100, 500);
+        res.setLocation(100, 550);
         c.add(res);
   
         resadd = new JTextArea();
@@ -186,8 +252,18 @@ class Expenses_Form
                       + tLiter_Price.getText() + "\n"
                       + "\t" + "Liters: "
                       + tLiters.getText() + "\n"
-                      + "Tolls  "
-                      + tTolls_Number.getSelectedItem() + "\n";
+                      + "Tolls  " + "\n"
+                      + "\t" + "Tolls Number: "
+                      + tTolls_Number.getSelectedItem() + "\n"
+                      + "\t" + "Tolls Total Cost: "
+                      + tTolls_total_Cost.getText() + "\n"
+                      + "Garage" + "\n"
+                      + "\t" + "Garage Name: "
+                      + tGarage_Name.getText() + "\n"
+                      + "\t" + "Repair Cost: " 
+                      + tRepair_Cost.getText() + "\n"
+                      + "\t" + "Repair Description: " 
+                      + tRepair_Description.getText();
                       
                 
                       
@@ -207,9 +283,12 @@ class Expenses_Form
             tLiter_Price.setText(def);
             tLiters.setText(def);
             tTolls_Number.setSelectedIndex(0);
+            tTolls_total_Cost.setText(def);
+            tGarage_Name.setText(def);
+            tRepair_Cost.setText(def);
+            tRepair_Description.setText(def);
             res.setText(def);
-            tout.setText(def);         
-            
+            tout.setText(def);    
             resadd.setText(def);
         }
     }
