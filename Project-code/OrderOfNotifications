@@ -1,33 +1,35 @@
     import java.util.*;  
-    import java.util.stream.*;
-    import java.text.SimpleDateFormat;
-    import java.text.ParseException;
-    import java.util.Date;
-    import static java.lang.System.out;
+import java.util.stream.*;
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
+import java.util.Date;
+import static java.lang.System.out;
     
     public class OrderOfNotifications
     {  
     public static void main(String[] args)   
     {  
     String[] Notifications = {"ExpensesForm", "DeniedDateofMeetingNotification", "AcceptedMeetingNotification", "VehicleAssistanceNotification"};
-    Date [] dates = {"2021-08-10","2021-07-11","2021-01-12","2021-03-11","2021-03-12" };
+    String dates[]={"10/02/2021", "15/02/2021", "20/04/2021", "17/01/2021"};
     int pined=1;
     int flag ;//to flag tha orizei thn shmantikothta toy notification
     String PreviusSelection="SortBasedonDate";//h metavlhth auth deixnei to pws exei epileksei o xrhsths na taxinomisei tis eidopoihseis
-    String[] d;//pinakas pou tha xrhsimopoihsoyme gia sygkriseis
+    String[] d={};//pinakas pou tha xrhsimopoihsoyme gia sygkriseis
     
     switch(PreviusSelection) {
         case "SortBasedonDate":
-        for (int i = 0; i < dates.length; i++){
-            SimpleDateFormat sdformat = new SimpleDateFormat("yyyy-MM-dd");
-            //Date d[i] = sdformat.parse(dates[i]);
-            
-        }
-        
-        
-        for(int j=0; j<d.length;j++){
+                 
+        for(int j=0; j<dates.length;j++){
+            //Date d1 = sdformat.parse(dates[j]);
+            //Date d2 = sdformat.parse(dates[j]);
+            //estw d1=10/02/2021 kai d2=15/02/2021
+            String d1="10/02/2021";
+            String d2="15/02/2021";
+    
             //kanoume sygrish twn hmeromhniwn kai taxinomish kata pio prosfaths hmeromhnias
-            if(d1[j].compareTo(d2[j]) > 0) {
+            if(d1.compareTo(d2) > 0) {
+                SimpleDateFormat sdformat = new SimpleDateFormat("yyyy-MM-dd");
+                String n;
                 n=d[j];
                 //allazoume thesh twn keliwn afou h prwth hmeromhnia einai metagenesterh
                 d[j]=d[j+1];
@@ -41,7 +43,7 @@
         //ean einai pined move on top
         if(pined==1){
             for(int k=0; k<Notifications.length;k++){
-                n=d[0];
+                String n= d[0];
                 d[0]=d[k];//metaferoume to pined sthn arixikh thesh dld sthn korufh twn eidopoihsewn
                 d[k]=n;
         }
@@ -52,4 +54,5 @@
     
     
     }  
-    } 
+    }  
+}
