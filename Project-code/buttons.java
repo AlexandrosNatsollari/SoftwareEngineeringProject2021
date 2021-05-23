@@ -54,7 +54,7 @@ public class buttons {
                 
                 
                       JButton btn4 = new JButton("Ειδοποιήσεις");
-        btn3.addActionListener(
+        btn4.addActionListener(
                 new ActionListener(){
                     public void actionPerformed(ActionEvent e) {
                         JOptionPane.showMessageDialog(f,
@@ -64,7 +64,7 @@ public class buttons {
                 });
                 
                                 JButton btn5 = new JButton("Έκτακτη Ανάγκη");
-        btn3.addActionListener(
+        btn5.addActionListener(
                 new ActionListener(){
                     public void actionPerformed(ActionEvent e) {
                         JOptionPane.showMessageDialog(f,
@@ -102,26 +102,6 @@ public class buttons {
     f.setSize(1000, 1000);
     f.setVisible(true);
   }
-  
-  
-  
-  
-  
-  
-  
-  
- 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   
 }
