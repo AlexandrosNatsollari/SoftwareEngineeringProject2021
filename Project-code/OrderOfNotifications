@@ -20,7 +20,7 @@
         case "SortBasedonDate":
         for (int i = 0; i < dates.length; i++){
             SimpleDateFormat sdformat = new SimpleDateFormat("yyyy-MM-dd");
-            Date d[i] = sdformat.parse(dates[i]);
+            //Date d[i] = sdformat.parse(dates[i]);
             
         }
         
