@@ -42,7 +42,7 @@
         if(pined==1){
             for(int k=0; k<Notifications.length;k++){
                 n=d[0];
-                d[0]=d[k]//metaferoume to pined sthn arixikh thesh dld sthn korufh twn eidopoihsewn
+                d[0]=d[k];//metaferoume to pined sthn arixikh thesh dld sthn korufh twn eidopoihsewn
                 d[k]=n;
         }
         break;
