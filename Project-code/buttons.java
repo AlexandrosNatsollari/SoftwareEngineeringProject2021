@@ -14,12 +14,12 @@ import javax.swing.border.TitledBorder;
 public class buttons {
   public static void main(String... args) {
    final JFrame f = new JFrame();
-   TitledBorder border = new TitledBorder("Αρχική οθόνη Xρήστη");
+   TitledBorder border = new TitledBorder("User Screen");
     border.setTitleJustification(TitledBorder.CENTER);
     border.setTitlePosition(TitledBorder.TOP);
    
         // Create OK button
-        JButton btn1 = new JButton("Εμφάνιση Χάρτη");
+        JButton btn1 = new JButton("Show Map");
    
         // Add event handler for OK button
         btn1.addActionListener(
@@ -31,44 +31,44 @@ public class buttons {
                     }
                 });
         // Create Cancel button
-        JButton btn2 = new JButton("Eξόδα μετακίνησης");
+        JButton btn2 = new JButton("Travel Expenses");
         btn2.addActionListener(
                 new ActionListener(){
                     public void actionPerformed(ActionEvent e) {
                         JOptionPane.showMessageDialog(f,
-                                "Φόρμα"
+                                "Form"
                                 );
                     }
                 });
                 
                 
-                JButton btn3 = new JButton("Ενημέρωση Παραγγελίας");
+                JButton btn3 = new JButton("Update Order");
         btn3.addActionListener(
                 new ActionListener(){
                     public void actionPerformed(ActionEvent e) {
                         JOptionPane.showMessageDialog(f,
-                                "Ενημέρωση"
+                                "Update"
                                 );
                     }
                 });
                 
                 
-                      JButton btn4 = new JButton("Ειδοποιήσεις");
+                      JButton btn4 = new JButton("Notifications");
         btn4.addActionListener(
                 new ActionListener(){
                     public void actionPerformed(ActionEvent e) {
                         JOptionPane.showMessageDialog(f,
-                                "Ειδοποίηση"
+                                "Showed Notification"
                                 );
                     }
                 });
                 
-                                JButton btn5 = new JButton("Έκτακτη Ανάγκη");
+                                JButton btn5 = new JButton("Emergency");
         btn5.addActionListener(
                 new ActionListener(){
                     public void actionPerformed(ActionEvent e) {
                         JOptionPane.showMessageDialog(f,
-                                "Έκτακτη ανάγκη"
+                                "Emergency"
                                 );
                     }
                 });
@@ -102,6 +102,26 @@ public class buttons {
     f.setSize(1000, 1000);
     f.setVisible(true);
   }
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
 }
