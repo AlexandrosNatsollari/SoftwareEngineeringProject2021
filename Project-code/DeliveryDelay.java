@@ -9,6 +9,10 @@ public class DeliveryDelay
             // Components of the Form
     private Container c;
     private JLabel title;
+    
+    private JLabel DeliveryID;
+    private JTextField tDeliveryID;
+    
     private JLabel Delay_Reason;
     private JTextArea tDelay_Reason;  
     
@@ -20,6 +24,7 @@ public class DeliveryDelay
     
     private JButton sub;
     private JButton reset;
+    private JButton close;
     private JTextArea tout;
     private JLabel res;
     private JTextArea resadd;
@@ -43,31 +48,43 @@ public class DeliveryDelay
         title.setSize(300, 30);
         title.setLocation(300, 30);
         c.add(title);
+        
+        DeliveryID = new JLabel("Delivery ID");
+        DeliveryID.setFont(new Font("Arial", Font.PLAIN, 20));
+        DeliveryID.setSize(100, 20);
+        DeliveryID.setLocation(120, 100);
+        c.add(DeliveryID);
+  
+        tDeliveryID = new JTextField();
+        tDeliveryID.setFont(new Font("Arial", Font.PLAIN, 15));
+        tDeliveryID.setSize(180, 20);
+        tDeliveryID.setLocation(300, 100);
+        c.add(tDeliveryID);
   
         Delay_Reason = new JLabel("Delay Reason");
         Delay_Reason.setFont(new Font("Arial", Font.PLAIN, 20));
         Delay_Reason.setSize(200, 20);
-        Delay_Reason.setLocation(100, 100);
+        Delay_Reason.setLocation(100, 140);
         c.add(Delay_Reason);
          
         tDelay_Reason = new JTextArea();
         tDelay_Reason.setFont(new Font("Arial", Font.PLAIN, 15));
         tDelay_Reason.setSize(180, 80);
-        tDelay_Reason.setLocation(300, 100);
+        tDelay_Reason.setLocation(300, 140);
         tDelay_Reason.setLineWrap(true);
         c.add(tDelay_Reason);
         
         Delay_Time = new JLabel("Delay Time");
         Delay_Time.setFont(new Font("Arial", Font.PLAIN, 20));
         Delay_Time.setSize(100, 20);
-        Delay_Time.setLocation(120, 200);
+        Delay_Time.setLocation(120, 240);
         c.add(Delay_Time);
   
         
         tDelay_Time = new JTextField();
         tDelay_Time.setFont(new Font("Arial", Font.PLAIN, 15));
         tDelay_Time.setSize(180, 20);
-        tDelay_Time.setLocation(300, 200);
+        tDelay_Time.setLocation(300, 240);
         c.add(tDelay_Time);
 
   
@@ -92,6 +109,13 @@ public class DeliveryDelay
         reset.setLocation(340, 300);
         reset.addActionListener(this);
         c.add(reset);
+        
+        close = new JButton("Close");
+        close.setFont(new Font("Arial", Font.PLAIN, 15));
+        close.setSize(100, 20);
+        close.setLocation(250, 340);
+        close.addActionListener(this);
+        c.add(close);
   
         tout = new JTextArea();
         tout.setFont(new Font("Arial", Font.PLAIN, 15));
@@ -124,34 +148,31 @@ public class DeliveryDelay
             
                 String data1;
                 String data
-                    = "Delay Reason : "
+                    = "Delivery ID: "
+                      + tDeliveryID.getText() + "\n"
+                      + "Delay Reason: "
                       + tDelay_Reason.getText() + "\n"
                       + "Appreciated Delay Time: " 
                       + tDelay_Time.getText();
-                      
-                
-                      
-                
-  
                 
                 tout.setText(data);
                 tout.setEditable(false);
                 res.setText("Form Submitted Successfully..");
-            
         }
   
         else if (e.getSource() == reset) {
             String def = "";
+            tDeliveryID.setText(def);
             tDelay_Reason.setText(def);            
             tDelay_Time.setText(def);
             res.setText(def);
             tout.setText(def);    
             resadd.setText(def);
         }
-    }
-            
-
-        
+        else if (e.getSource() == close){
+            setVisible(false);
+        }
+    }        
     }
 
   class Delay {
