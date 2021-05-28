@@ -14,7 +14,7 @@ import java.awt.Color;
 
 
 public class EmergencyButtons {
-  public static void main(String... args) {
+  public  EmergencyButtons() {
    final JFrame f = new JFrame();
    TitledBorder border = new TitledBorder("Emergency Buttons");
     border.setTitleJustification(TitledBorder.CENTER);
@@ -61,7 +61,18 @@ public class EmergencyButtons {
                 });
                 
             
-
+                JButton btn4 = new JButton("Back");
+                btn4.addActionListener(
+                new ActionListener()
+                {
+                    public void actionPerformed(ActionEvent e) {
+                         if(e.getSource()==btn4)
+                            {
+                             f.setVisible(false);
+                            }
+                    }
+                 }
+                 );
 
     JPanel p = new JPanel();
      p.setBorder(border);
@@ -75,12 +86,12 @@ public class EmergencyButtons {
     btn1.setBounds(30, 20, 180, 70);
     btn2.setBounds(30, 100, 180, 70);
     btn3.setBounds(30, 180, 180, 70);
-   
+    btn4.setBounds(30, 260, 180, 70);
     
     p.add(btn1);
     p.add(btn2);
     p.add(btn3);
-    
+    p.add(btn4);
 
 
     f.add(p);
@@ -89,26 +100,5 @@ public class EmergencyButtons {
     f.setSize(1000, 1000);
     f.setVisible(true);
   }
-  
-  
-  
-  
-  
-  
-  
-  
- 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
 }
