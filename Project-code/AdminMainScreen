@@ -53,7 +53,15 @@ public class AdminMainScreen {
                 new ActionListener()
                 {
                     public void actionPerformed(ActionEvent e) {
-                        JOptionPane.showMessageDialog(f,"NotificationsScreen");
+                        if(e.getSource()==btn4)
+                            {
+                                
+                                AdminNotifications c = new AdminNotifications();
+                                
+                               
+                            }
+                            
+                         
                     }
                 });
                 
