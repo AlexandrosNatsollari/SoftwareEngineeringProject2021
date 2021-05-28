@@ -9,10 +9,9 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
-
-
+ 
 public class DeliveryUpdate{
-  public static void main(String... args){
+  public DeliveryUpdate(){
        final JFrame f = new JFrame();
        TitledBorder border = new TitledBorder("Delivery Update Screen");
         border.setTitleJustification(TitledBorder.CENTER);
@@ -32,9 +31,7 @@ public class DeliveryUpdate{
                                 
                                
                             }
-                            
-                         
-                    }
+                        }
                 }
                  );
                 
@@ -55,7 +52,18 @@ public class DeliveryUpdate{
                  }
                  );
                 
-                
+                 JButton btn3 = new JButton("Back");
+                btn3.addActionListener(
+                new ActionListener()
+                {
+                    public void actionPerformed(ActionEvent e) {
+                         if(e.getSource()==btn3)
+                            {
+                             f.setVisible(false);
+                            }
+                    }
+                 }
+                 );
                
 
 
@@ -70,11 +78,11 @@ public class DeliveryUpdate{
     p.setLayout(null);
     btn1.setBounds(300, 300, 180, 70);
     btn2.setBounds(520, 300, 180, 70);
-    
+    btn3.setBounds(410, 410, 180, 70);
     
     p.add(btn1);
     p.add(btn2);
-    
+    p.add(btn3);
 
     f.add(p);
    
@@ -82,5 +90,4 @@ public class DeliveryUpdate{
     f.setSize(1000, 1000);
     f.setVisible(true);
   }
-  
-}
+  }
