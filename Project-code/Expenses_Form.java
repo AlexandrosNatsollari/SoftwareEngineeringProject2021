@@ -34,6 +34,7 @@ class Expenses_Form
     
     private JButton sub;
     private JButton reset;
+    private JButton close;
     private JTextArea tout;
     private JLabel res;
     private JTextArea resadd;
@@ -211,6 +212,13 @@ class Expenses_Form
         reset.setLocation(340, 500);
         reset.addActionListener(this);
         c.add(reset);
+        
+        close = new JButton("Close");
+        close.setFont(new Font("Arial", Font.PLAIN, 15));
+        close.setSize(100, 20);
+        close.setLocation(250, 540);
+        close.addActionListener(this);
+        c.add(close);
   
         tout = new JTextArea();
         tout.setFont(new Font("Arial", Font.PLAIN, 15));
@@ -223,7 +231,7 @@ class Expenses_Form
         res = new JLabel("");
         res.setFont(new Font("Arial", Font.PLAIN, 20));
         res.setSize(500, 25);
-        res.setLocation(100, 550);
+        res.setLocation(100, 570);
         c.add(res);
   
         resadd = new JTextArea();
@@ -290,6 +298,9 @@ class Expenses_Form
             res.setText(def);
             tout.setText(def);    
             resadd.setText(def);
+        }
+        else if (e.getSource() == close){
+            setVisible(false);
         }
     }
 }
