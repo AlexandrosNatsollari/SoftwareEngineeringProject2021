@@ -3,27 +3,19 @@ import java.awt.*;
 import java.awt.event.*;
 
 
-public class AdminNotificationScreen
-         extends JFrame
-        implements ActionListener {
-            // Components of the Form
+public class AdminNotificationScreen extends JFrame implements ActionListener {
+    // Components of the Form
     private Container c;
     private JLabel title;
-   
-    
-    
-   
+     
     
     private JButton EFN;//ExpensesFormNotification
     private JButton DDOFMN;//DeniedDateOfMeetingNotification
     private JButton ADOFMN;//AcceptedDateOfMeetingNotification
     private JButton VAN;//VehicleAssistanceNotification
-    private JTextArea tout;
+    private JButton NotificationManagment;//NotificationManagement
     private JLabel res;
-    private JTextArea resadd;
-    
-    
-    
+    final JFrame d = new JFrame();
     // constructor, to initialize the components
     // with default values.
     public AdminNotificationScreen()
@@ -42,7 +34,7 @@ public class AdminNotificationScreen
         title.setLocation(430, 50);
         c.add(title);
         
-        final JFrame f = new JFrame();
+        
         
         EFN = new JButton("ExpensesFormNotification");
         EFN.setFont(new Font("Arial", Font.PLAIN, 15));
@@ -66,6 +58,14 @@ public class AdminNotificationScreen
         ADOFMN.setLocation(300, 300);
         ADOFMN.addActionListener(this);
         c.add(ADOFMN);
+        
+        
+        NotificationManagment = new JButton("NotificationManagment");
+        NotificationManagment.setFont(new Font("Arial", Font.PLAIN, 15));
+        NotificationManagment.setSize(200, 50);
+        NotificationManagment.setLocation(750, 600);
+        NotificationManagment.addActionListener(this);
+        c.add(NotificationManagment);
         
         
         VAN = new JButton("VehicleAssistanceNotification");
@@ -94,7 +94,8 @@ public class AdminNotificationScreen
     {
         if (e.getSource() == EFN) {
             res.setText("ExpensesFormNotificationReview");
-            //edw tha anoigei thn forma gia proepiskopish
+            ExpensesFormNotificationReview d = new ExpensesFormNotificationReview();
+            
         }
         else if (e.getSource() == DDOFMN) {
             res.setText("DeniedMeetingNotification");
@@ -107,6 +108,10 @@ public class AdminNotificationScreen
         else if (e.getSource() == VAN) {
             res.setText("VehicleAssistanceNotification");
             //edw tha kalei odikh voitheia
+        }
+        else if(e.getSource() == NotificationManagment) {
+            res.setText("NotificationManagment");
+            NotificationManagment b = new NotificationManagment();
         }
         
     }
