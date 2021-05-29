@@ -64,7 +64,7 @@ public class AdminMainScreen {
                         if(e.getSource()==btn4)
                             {
                                 
-                                AdminNotificationScreen c = new AdminNotificationScreen();
+                                AdminNotificationScreen a = new AdminNotificationScreen();
                                 
                                
                             }
