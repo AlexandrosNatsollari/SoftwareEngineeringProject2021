@@ -38,12 +38,20 @@ public class AdminMainScreen {
                 });
                 
                 
-                JButton btn3 = new JButton("Driver Administration");
-                btn3.addActionListener( 
-                 new ActionListener()
+               JButton btn3 = new JButton("Driver Administration");
+               btn3.addActionListener(
+                new ActionListener()
                 {
                     public void actionPerformed(ActionEvent e) {
-                        JOptionPane.showMessageDialog(f,"DriverAdministrationScren");
+                        if(e.getSource()==btn3)
+                            {
+                                
+                                DriverAdministrationScreen c = new DriverAdministrationScreen();
+                                
+                               
+                            }
+                            
+                         
                     }
                 });
                 
@@ -73,22 +81,7 @@ public class AdminMainScreen {
                     }
                 });
 
-                JButton btn6 = new JButton("Manage Drivers");
-               btn6.addActionListener(
-                new ActionListener()
-                {
-                    public void actionPerformed(ActionEvent e) {
-                        if(e.getSource()==btn6)
-                            {
-                                
-                                ManageDriversScreen c = new ManageDriversScreen();
-                                
-                               
-                            }
-                            
-                         
-                    }
-                });
+              
     JPanel p = new JPanel();
      p.setBorder(border);
     f.add(p);
@@ -103,15 +96,14 @@ public class AdminMainScreen {
     btn3.setBounds(30, 180, 180, 70);
     btn4.setBounds(30, 260, 180, 70);
     btn5.setBounds(30, 350, 180, 70);
-    btn6.setBounds(30, 430, 180, 70);
+   
     
     p.add(btn1);
     p.add(btn2);
     p.add(btn3);
     p.add(btn4);
     p.add(btn5);
-    p.add(btn6);
-
+   
 
     f.add(p);
     // setLayout(null);
