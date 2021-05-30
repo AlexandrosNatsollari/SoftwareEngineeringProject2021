@@ -99,15 +99,14 @@ public class AdminNotificationScreen extends JFrame implements ActionListener {
         }
         else if (e.getSource() == DDOFMN) {
             res.setText("DeniedMeetingNotification");
-            //edw tha stelnete sto use case toy ContactDriver
+            ContactDriverScreen c = new ContactDriverScreen();
         }
         else if (e.getSource() == ADOFMN) {
             res.setText("AcceptedMeetingNotification");
-            //edw tha pataei ok kai diagrafh eidopoihshs nomizw
         }
         else if (e.getSource() == VAN) {
             res.setText("VehicleAssistanceNotification");
-            //edw tha kalei odikh voitheia
+            VehicleAssistanceNotification h = new VehicleAssistanceNotification();
         }
         else if(e.getSource() == NotificationManagment) {
             res.setText("NotificationManagment");
