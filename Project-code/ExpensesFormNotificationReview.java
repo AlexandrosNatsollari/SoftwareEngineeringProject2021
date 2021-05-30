@@ -9,15 +9,16 @@ import javax.imageio.ImageIO;
  
 
 
-public class ExpensesFormNotificationReview
-         extends JFrame
-        implements ActionListener {
+public class ExpensesFormNotificationReview extends JFrame implements ActionListener {
              private JLabel res;
              private Container c;
              private JButton AcceptButton;
              private JButton DenieButton;
-            
+             private String FormContdition;
              
+             public void setUpdateFormContdition(String newFormContdition) {
+                        this.FormContdition = newFormContdition;
+                     }
              
              public ExpensesFormNotificationReview(){
                     JPanel panel = new JPanel();
@@ -25,12 +26,12 @@ public class ExpensesFormNotificationReview
                     // Add button to JPanel
                     panel.add(AcceptButton);
                     this.getContentPane().add(panel);
-                    JButton DenieButton = new JButton("DenieExpeneses!");
+                    JButton DenieButton = new JButton("DenyExpeneses!");
                     // Add button to JPanel
                     panel.add(DenieButton);
                     this.getContentPane().add(panel);
                     setVisible(true);
-   
+                    
                     
                     try
                     {
@@ -42,18 +43,13 @@ public class ExpensesFormNotificationReview
                         JFrame.setDefaultLookAndFeelDecorated(true);
                         JFrame frame = new JFrame("ExpensesForm");
                         
-                        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                        //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
  
                         // add the Jpanel to the main window
                         frame.add(panel); 
  
                         frame.pack();
-                        //DDOFMN = new JButton("DeniedDateOfMeetingNotification");
-                        //DDOFMN.setFont(new Font("Arial", Font.PLAIN, 15));
-                        //DDOFMN.setSize(400, 100);
-                        //DDOFMN.setLocation(300, 200);
-                        //DDOFMN.addActionListener(this);
-                        //frame.add(DDOFMN);
+                        
                         frame.setVisible(true);
                     }
                     catch (java.io.IOException ioe)
@@ -67,15 +63,19 @@ public class ExpensesFormNotificationReview
                     if (e.getSource() == AcceptButton) {
                        //send notification to driver that ExpensesForm is Accepted
                        
+                       setUpdateFormContdition("ExpensesFormAccepted!");
+                       
             
                     }
                     else if (e.getSource() == DenieButton) {
                        //send notification to driver that ExpensesForm is Denied
-                       
+                       setUpdateFormContdition("ExpensesFormDenied!");
             
                     }
                  
                 }
+             
+             
             }
         
 class ExpensesForm {
