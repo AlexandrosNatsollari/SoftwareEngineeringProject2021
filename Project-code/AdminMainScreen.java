@@ -5,9 +5,7 @@ import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
 
 
@@ -24,7 +22,7 @@ public class AdminMainScreen {
                 btn1.addActionListener(
                  new ActionListener(){
                     public void actionPerformed(ActionEvent e) {
-                        JOptionPane.showMessageDialog(f,"VehicleAdministrationScreen");
+                        VehicleAdministrationScreen k = new VehicleAdministrationScreen();
                     }
                 });
                 
