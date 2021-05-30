@@ -9,9 +9,7 @@ import javax.imageio.ImageIO;
  
 
 
-public class NotificationManagment
-         extends JFrame
-        implements ActionListener {
+public class NotificationManagment extends JFrame implements ActionListener {
              // Components of the Form
              private Container w;
              private JLabel title;
