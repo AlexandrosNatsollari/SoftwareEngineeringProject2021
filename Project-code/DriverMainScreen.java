@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
 
 
-public class DriverMainScreenButtons {
+public class DriverMainScreen {
   public static void main(String... args) {
         final JFrame f = new JFrame();
         TitledBorder border = new TitledBorder("DriverMainScreen");
@@ -26,7 +26,10 @@ public class DriverMainScreenButtons {
         new ActionListener()
         {
               public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(f,"Map");
+                if(e.getSource()==btn1)
+                            {
+                                DriversMap c = new DriversMap();                                                              
+                            }
                     }
                 }
         );
