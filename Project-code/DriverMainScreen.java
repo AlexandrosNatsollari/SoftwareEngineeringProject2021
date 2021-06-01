@@ -84,7 +84,19 @@ public class DriverMainScreen {
                     }
                 }
         );
-
+        
+        JButton btn6 = new JButton("ManageProfile");
+        btn6.addActionListener(
+        new ActionListener()
+        {
+                    public void actionPerformed(ActionEvent e) {
+                        if(e.getSource()==btn6)
+                            {
+                                ProfileManagment j = new ProfileManagment();
+                            }
+                    }
+                }
+        );
 
         JPanel p = new JPanel();
          p.setBorder(border);
@@ -99,14 +111,15 @@ public class DriverMainScreen {
         btn2.setBounds(30, 100, 180, 70);
         btn3.setBounds(30, 180, 180, 70);
         btn4.setBounds(30, 260, 180, 70);
-        btn5.setBounds(30, 350, 180, 70);
-    
+        btn5.setBounds(30, 340, 180, 70);
+        btn6.setBounds(30, 420, 180, 70);
+        
         p.add(btn1);
         p.add(btn2);
         p.add(btn3);
         p.add(btn4);
         p.add(btn5);
-
+        p.add(btn6);
 
         f.add(p);
         // setLayout(null);
