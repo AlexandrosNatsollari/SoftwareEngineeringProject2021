@@ -30,7 +30,8 @@ public class DriverAdministrationScreen
    TitledBorder border = new TitledBorder("DriverMainScreen");
     border.setTitleJustification(TitledBorder.CENTER);
     border.setTitlePosition(TitledBorder.TOP);
-   
+  
+    
         // Create OK button
         JButton btn1 = new JButton("List of Drivers");
    
@@ -38,9 +39,16 @@ public class DriverAdministrationScreen
         btn1.addActionListener(
                 new ActionListener(){
                     public void actionPerformed(ActionEvent e) {
-                        JOptionPane.showMessageDialog(f,
-                                "  First Name | Last Name \n    Tony              Evans \n    Penelope          Reed \n    Sofia              Murray \n    Blake              Brown \n    John              Dainton "
-                                );
+                        if(e.getSource()==btn1)
+                            {
+                                
+                                ManageDrivers k = new ManageDrivers();
+                                k.createAndShowGUI();
+                                
+                               
+                            }
+                            
+                         
                     }
                 });
         // Create Cancel button
