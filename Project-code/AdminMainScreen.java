@@ -75,7 +75,10 @@ public class AdminMainScreen {
                 btn5.addActionListener(
                  new ActionListener(){
                     public void actionPerformed(ActionEvent e) {
-                        JOptionPane.showMessageDialog(f,"ManageProfileScreen");
+                        if(e.getSource()==btn5)
+                            {
+                                ProfileManagment j = new ProfileManagment();
+                            }
                     }
                 });
 
