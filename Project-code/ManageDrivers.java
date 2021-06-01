@@ -11,8 +11,8 @@ public class ManageDrivers extends JPanel
     private JList list;
     private DefaultListModel listModel;
  
-    private static final String hireString = "Hire";
-    private static final String fireString = "Fire";
+    private static final String hireString = "New Program";
+    private static final String fireString = "Keep old Program";
     private JButton fireButton;
     private JTextField employeeName;
  
