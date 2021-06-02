@@ -80,7 +80,7 @@ public class VehicleAdministrationScreen extends JFrame implements ActionListene
             
         }
         else if(e.getSource() == ManualPear){
-            //ManualPearing g = new ManualPearing();
+            ManualPearing g = new ManualPearing();
         
         }
         
