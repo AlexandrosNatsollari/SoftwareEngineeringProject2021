@@ -16,13 +16,14 @@ public class ProperPearing extends JFrame implements ActionListener {
              private Container c;
              private JButton AcceptButton;
              private JButton DenieButton;
-             private String[] VehiclesInfo; 
-             private String[] DriverInfo;
-             private String[] OrdersInfo;
-             private String[] CarOrderPear;
-             private String[] ProperPear;
+             static String[] VehiclesInfo; 
+             static String[] DriverInfo;
+             static String[] OrdersInfo;
+             static String[] CarOrderPear;
+             static String[] ProperPear;
              final JFrame f = new JFrame();
-             
+             private JButton ManualPear;//Manual Pearing
+             private JLabel title;
              
              //edw tha zhtame dedomena apo thn vash kai tha lamvanoume apotelesmata molis ftiaxtei to backend
              public void RequestVehiclesInfo(String newVehiclesInfo) {
@@ -50,9 +51,32 @@ public class ProperPearing extends JFrame implements ActionListener {
                      
                      
             
-             //diadoxikes sygriseis gia na vroume to kalutero zeugari
+             
              public ProperPearing(){
-                    for (int i = 0; i < OrdersInfo.length; i++) {
+                    setTitle("AutoPearResult!");
+                    setBounds(500, 200, 1000, 700);
+                    setDefaultCloseOperation(EXIT_ON_CLOSE);
+                    setResizable(false);
+  
+                    c = getContentPane();
+                    c.setLayout(null);
+  
+                    title = new JLabel("AutoPearResult");
+                    title.setFont(new Font("Arial", Font.PLAIN, 30));
+                    title.setSize(300, 30);
+                    title.setLocation(430, 50);
+                    c.add(title);
+        
+        
+        
+                    ManualPear = new JButton("DenyAutoPear");
+                    ManualPear.setFont(new Font("Arial", Font.PLAIN, 15));
+                    ManualPear.setSize(200, 50);
+                    ManualPear.setLocation(750, 600);
+                    ManualPear.addActionListener(this);
+                    c.add(ManualPear);
+                    //diadoxikes sygriseis gia na vroume to kalutero zeugari
+                    /*for (int i = 0; i < OrdersInfo.length; i++) {
                         String NumberOfTonsOnly1 = OrdersInfo[i].replaceAll("[^0-9]", "");
                         for(int k = 0; k < VehiclesInfo.length; k++){
                             String NumberOfTonsOnly2 = VehiclesInfo[k].replaceAll("[^0-9]", "");
@@ -66,15 +90,31 @@ public class ProperPearing extends JFrame implements ActionListener {
                     for(int j = 0; j < CarOrderPear.length; j++){
                         ProperPear[j] = CarOrderPear[j]+DriverInfo[j];
                     }
+                    for(int r = 0; r < ProperPear.length; r++){
+                    //System.out.printf("ProperPearing: %s", ProperPear[r]);
+                 
+                    }*/
                     
+                     res = new JLabel("");
+                     res.setFont(new Font("Arial", Font.PLAIN, 20));
+                     res.setSize(500, 25);
+                     res.setLocation(100, 550);
+                     c.add(res);
+  
+       
+  
+         
+                     setVisible(true);
                 }    
                 
              public void actionPerformed(ActionEvent e){
-                 for(int r = 0; r < ProperPear.length; r++){
-                    //System.out.printf("ProperPearing: %s", ProperPear[r]);
-                 
+                if (e.getSource() == ManualPear) {
+                    res.setText("GoingToManualPear");
+                    ManualPearing g = new ManualPearing();
+            
                 }
-             
+                 
+                
              
             }
         }
