@@ -2,10 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.*;
-import java.awt.image.*;
 import java.io.*;
 import javax.swing.*;
-import javax.imageio.ImageIO;
+
  
 
 
@@ -15,9 +14,6 @@ public class ManualPearing extends JFrame implements ActionListener {
              private JLabel title;
              private JLabel res;
              
-             private JButton Delete;//Delete Notification
-             private JButton Order;//Order Notifications
-             private JButton Pin;//Pin Notification
             
              JList list;
              JList list2;
@@ -25,7 +21,7 @@ public class ManualPearing extends JFrame implements ActionListener {
              DefaultListModel model;
              DefaultListModel model2;
 
-             int counter = 15;
+            
 
             public ManualPearing() {           
                  JFrame f= new JFrame();  
@@ -88,7 +84,7 @@ public class ManualPearing extends JFrame implements ActionListener {
                           
                           if (list3.getSelectedIndex() != -1) {                       
                              for(Object frame3 :list3.getSelectedValues()){  
-                                data += ", " + frame3 + " ";  
+                                data += ",Driver Selected: " + frame3 + " ";  
                                 
                              }   
                           }
