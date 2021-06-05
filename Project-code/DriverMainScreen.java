@@ -67,7 +67,7 @@ public class DriverMainScreen {
          new ActionListener()
          {
                     public void actionPerformed(ActionEvent e) {
-                        JOptionPane.showMessageDialog(f,"Showed Notification");
+                        DriverNotificationScreen q = new DriverNotificationScreen();
                     }
                 }
         );
