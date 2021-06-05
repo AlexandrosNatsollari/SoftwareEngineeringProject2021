@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 
 public class Login {
-    public static void main(String[] a){
+    public Login(){
         //Creating object of LoginFrame class and setting some of its properties
         LoginFrame frame=new LoginFrame();
         frame.setTitle("Login Form");
