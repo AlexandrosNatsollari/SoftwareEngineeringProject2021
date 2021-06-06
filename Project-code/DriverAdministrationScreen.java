@@ -27,7 +27,7 @@ public class DriverAdministrationScreen
     public DriverAdministrationScreen()
     {
    final JFrame f = new JFrame();
-   TitledBorder border = new TitledBorder("DriverMainScreen");
+   TitledBorder border = new TitledBorder("Driver Administration Screen");
     border.setTitleJustification(TitledBorder.CENTER);
     border.setTitlePosition(TitledBorder.TOP);
   
