@@ -39,9 +39,9 @@ public class DeliveryCompletion
         c = getContentPane();
         c.setLayout(null);
   
-        title = new JLabel("Delivery Delay Form");
+        title = new JLabel("Delivery Completion Form");
         title.setFont(new Font("Arial", Font.PLAIN, 30));
-        title.setSize(300, 30);
+        title.setSize(350, 30);
         title.setLocation(300, 30);
         c.add(title);
           
@@ -59,9 +59,9 @@ public class DeliveryCompletion
         tDeliveryID.setLocation(300, 100);
         c.add(tDeliveryID);
 
-        Completion_Time = new JLabel("Delay Time");
+        Completion_Time = new JLabel("Completion Time");
         Completion_Time.setFont(new Font("Arial", Font.PLAIN, 20));
-        Completion_Time.setSize(100, 20);
+        Completion_Time.setSize(200, 20);
         Completion_Time.setLocation(120, 140);
         c.add(Completion_Time);
   
