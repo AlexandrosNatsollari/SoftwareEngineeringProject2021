@@ -31,7 +31,7 @@ public class AdminMainScreen {
                 btn2.addActionListener(
                  new ActionListener(){
                     public void actionPerformed(ActionEvent e) {
-                        JOptionPane.showMessageDialog(f,"ContactDriverScreen");
+                        ContactDriver c = new ContactDriver();
                     }
                 });
                 
