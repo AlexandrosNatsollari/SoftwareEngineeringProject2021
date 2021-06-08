@@ -77,7 +77,7 @@ public class VehicleAdministrationScreen extends JFrame implements ActionListene
             ProperPearing n = new ProperPearing();
         }
         else if (e.getSource() == VC) {
-            
+            VehicleCondition r = new VehicleCondition();
         }
         else if(e.getSource() == ManualPear){
             ManualPearing g = new ManualPearing();
