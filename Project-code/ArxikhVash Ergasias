@@ -34,3 +34,27 @@ CREATE TABLE orders (
   weight_aproximation VARCHAR(256)
 
 );
+
+CREATE TABLE Expenses_Form (
+    FormID INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    LicensePlate VARCHAR(8),
+    FuelType VARCHAR(15),
+    LiterPrice FLOAT(6),
+    Liters DOUBLE,
+    TollsNumber INT(11),
+    TollsTotalCost DOUBLE,
+    GarageName VARCHAR(256),
+    RepairCost DOUBLE,
+    RepairDescription TEXT(256)
+);
+
+CREATE TABLE deliverydelay (
+  DeliveryID int(11) PRIMARY KEY NOT NULL,
+  DelayReason varchar(256) NOT NULL,
+  DelayTime varchar(256) NOT NULL
+);
+
+CREATE TABLE deliverycompletion (
+  DeliveryID int(11) PRIMARY KEY NOT NULL,
+  CompletionTime varchar(256) NOT NULL
+);
