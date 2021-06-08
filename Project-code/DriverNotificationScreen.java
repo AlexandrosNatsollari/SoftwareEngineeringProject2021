@@ -82,7 +82,7 @@ public class DriverNotificationScreen extends JFrame implements ActionListener {
         }
         else if (e.getSource() == NRN) {
             res.setText("ViewingNewRotaNotification...");
-            //ContactDriverScreen c = new ContactDriverScreen();
+            NewRotaNotification m = new NewRotaNotification();
         }
         else if(e.getSource() == NotificationManagment) {
             res.setText("NotificationManagment");
