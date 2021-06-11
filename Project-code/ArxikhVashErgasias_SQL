@@ -1,0 +1,131 @@
+CREATE TABLE users (
+    username VARCHAR(256) PRIMARY KEY NOT NULL,
+    first_name VARCHAR(256),
+    password VARCHAR(256),
+    last_name VARCHAR(256),
+    phonenumber VARCHAR(256) ,
+    passport_id VARCHAR(256), 
+    user_type VARCHAR(256)
+);
+
+CREATE TABLE cars (
+    car_id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    model VARCHAR(256),
+    car_length VARCHAR(256),
+    last_service DATETIME,
+    service_due DATETIME,
+    weight VARCHAR(256),
+    kilometers VARCHAR(256),
+    cargo_capable VARCHAR(256)
+);
+
+CREATE TABLE driverhours (
+  monthlyRota_id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  user_username VARCHAR(256) ,
+  FOREIGN KEY (user_username) REFERENCES users(username) ON DELETE CASCADE ON UPDATE CASCADE,
+  hours VARCHAR(256)
+  
+
+);
+
+CREATE TABLE orders (
+  order_id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  order_due VARCHAR(256),
+  weight_aproximation VARCHAR(256)
+
+);
+
+CREATE TABLE Expenses_Form (
+    FormID INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    LicensePlate VARCHAR(8),
+    FuelType VARCHAR(15),
+    LiterPrice FLOAT(6),
+    Liters DOUBLE,
+    TollsNumber INT(11),
+    TollsTotalCost DOUBLE,
+    GarageName VARCHAR(256),
+    RepairCost DOUBLE,
+    RepairDescription TEXT(256)
+);
+
+CREATE TABLE deliverydelay (
+  DeliveryID int(11) PRIMARY KEY NOT NULL,
+  DelayReason varchar(256) NOT NULL,
+  DelayTime varchar(256) NOT NULL
+);
+
+CREATE TABLE deliverycompletion (
+  DeliveryID int(11) PRIMARY KEY NOT NULL,
+  CompletionTime varchar(256) NOT NULL
+);
+
+CREATE TABLE VehicleInfo (
+  vehicle_id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  Cargo_Capable VARCHAR(256) 
+);
+
+
+CREATE TABLE DriverInfo (
+  driver_id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  driver_user_username VARCHAR(256) ,
+  FOREIGN KEY (driver_user_username) REFERENCES users(username) ON DELETE CASCADE ON UPDATE CASCADE,
+  can_drive_car VARCHAR(256)
+);
+
+
+CREATE TABLE AdminNotifications (
+  notification_id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  Expenses_Form_Notification VARCHAR(256),
+  Delivery_Update_Notification VARCHAR(256),
+  Meeting_Notification VARCHAR(256)
+);
+
+
+CREATE TABLE DriverNotifications (
+  Driver_notification_id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  Expenses_Form_Notification VARCHAR(256),
+  New_Rota_Notification VARCHAR(256)
+  
+
+);
+
+
+CREATE TABLE FormCondition (
+  form_id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  Form_Cond VARCHAR(256)
+);
+
+
+CREATE TABLE NotifiCationOrder (
+  notificaton_order_id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  Previus_Selection VARCHAR(256)
+);
+
+
+CREATE TABLE VehicleAssistance (
+  vehicle_assistance_id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  Phone_Number INT(11)
+);
+
+CREATE TABLE GarageServices (
+  garage_id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  Phone_Number INT(11),
+  Garage_Name  VARCHAR(256)
+);
+
+
+
+
+CREATE TABLE EmergencyAssistance (
+  Assistance_id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  Police_Number INT(11),
+  Ambulance_Number INT(11),
+  RoadSide_Assistance INT(11)
+);
+
+CREATE TABLE Appointments (
+  Appointments_id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  Meeting_Date DATETIME
+);
+
+
