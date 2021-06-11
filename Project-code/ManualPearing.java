@@ -26,7 +26,7 @@ public class ManualPearing extends JFrame implements ActionListener {
             public ManualPearing() {           
                  JFrame f= new JFrame();  
                  final JLabel label = new JLabel();          
-                 label.setSize(750,75);  
+                 label.setSize(1000,75);  
                  JButton b=new JButton("Pear");  
                  b.setBounds(200,150,80,30);
                  b.setLocation(600, 550);
@@ -61,7 +61,7 @@ public class ManualPearing extends JFrame implements ActionListener {
                    list3.setLocation(50, 300);
                    
                    f.add(list1); f.add(list2); f.add(list3); f.add(b); f.add(label);  
-                   f.setSize(750,750);  
+                   f.setSize(1500,1500);  
                    f.setLayout(null);  
                    f.setVisible(true);  
                    b.addActionListener(new ActionListener() 
